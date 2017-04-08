@@ -2,6 +2,7 @@
 define(["jquery","cookie","form"], function ($) {
 	//获取用户之前登录的头像信息
 	var userInfoStr = $.cookie("userInfo");
+    console.log(userInfoStr);
 	if(userInfoStr){
 		//如果获取到了，就把这个头像设置为用户的头像		
 		var userInfo = JSON.parse(userInfoStr);
