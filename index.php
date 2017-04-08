@@ -11,17 +11,18 @@
 	//判断用户有没有在index.php后面跟上路径信息
 	if(array_key_exists("PATH_INFO", $_SERVER)){
 		//如果有传进来的路径信息，就使用传进来把我们的默认值给覆盖到
-		 $pathinfo = $_SERVER["PATH_INFO"];
+		$pathinfo = $_SERVER["PATH_INFO"];
 	}
-
-	// echo $pathinfo;
-
 
 	//把获取到的路径信息，转换成数组
 	//数组中的第一个元素，就是用户传进来的模块名
 	//数组中的第二个元素，就是用户传进来的文件名
 	$pathArr = explode("/", substr($pathinfo, 1));
 
-	//根据用户传进来的东西，动态的拼接文件路径，把文件include进来
-	include "/views/".$pathArr[0]."/".$pathArr[1].".html";
+	if(count($pathArr) == 2){
+		//根据用户传进来的东西，动态的拼接文件路径，把文件include进来
+		include "/views/".$pathArr[0]."/".$pathArr[1].".html";
+	}else{
+		include "/views/dashboard/".$pathArr[0].".html";
+	}
  ?>

@@ -8,27 +8,124 @@
     <div class="login">
         <div class="login-wrap">
             <div class="avatar">
-                <img src="./uploads/monkey.png" class="img-circle" alt="">
+                <img src="/views/public/uploads/monkey.png" class="img-circle" alt="">
             </div>
-            <form action="" class="col-xs-offset-1 col-xs-10">
+            <form method="post" action="/api/login" name="form" class="col-xs-offset-1 col-xs-10" >
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon">
                         <i class="fa fa-user"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="用户名">
+                    <input type="text" id="tc_name" name="tc_name" class="form-control" placeholder="用户名">
                 </div>
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon">
                         <i class="fa fa-key"></i>
                     </span>
-                    <input type="password" class="form-control" placeholder="密码">
+                    <input type="password" id="tc_pass" name="tc_pass" class="form-control" placeholder="密码">
                 </div>
-                <button type="submit" class="btn btn-lg btn-primary btn-block">登 录</button>
+                <button type="submit" id="lgBtn" class="btn btn-lg btn-primary btn-block">登 录</button>
             </form>
         </div>
     </div>
     
-    <script src="./assets/jquery/jquery.min.js"></script>
-    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <!--  <script src="/views/public/assets/jquery/jquery.min.js"></script>
+    <script src="/views/public/assets/jquery-cookie/jquery.cookie.js"></script>
+    <!-- form插件 -->
+    <!-- <script src="/views/public/assets/jquery-form/jquery.form.js"></script>
+ -->
+     <script src="/views/public/js/lib/require.js"></script>
+     <script src="/views/public/js/lib/config.js"></script>
+
+    <script>
+      require(["../js/dashboard/login"],function () {
+
+      })
+
+
+
+
+
+
+
+
+
+       // 给登录按钮注册事件,发送请求,传输数据
+        // var lgBtn = document.getElementById("lgBtn");
+           
+        // lgBtn.onclick = function () {
+        //      var name = document.getElementById("tc_name").value;
+        //      var pwd = document.getElementById("tc_pass").value;
+        //     //获取用户名的密码
+        //     //交互四部
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open("post","/api/login");
+        //     //
+        //     xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded") 
+        //     xhr.send("tc_name="+name+"&tc_pass=" + pwd);
+        //     xhr.onreadystatechange = function () {
+        //         if (xhr.status == 200 && xhr.readyState == 4) {
+        //             alert("登录成功");
+        //         }
+        //     }
+        //     return false;
+        // }
+
+
+        //jquery
+        // $("#lgBtn").click(function () {
+        //     //var name = $("#tc_name").val();
+        //     //var pwd = $("#tc_pass").val();
+        //     //发送请求
+        //     $.ajax({
+        //         url: "/api/login",
+        //         type: "post",
+        //         data: $("form").serializeArray(),
+        //         // data: {tc_name: name, tc_pass: pwd},
+        //         success: function(data){
+        //             if(data.code == 200){
+        //                 alert("登录成功");
+        //             }
+        //         }
+        //     });
+        //     return false;
+        // });
+
+    
+        //插件
+        // $("#lgBtn").click(function() {
+        //     $("form").ajaxSubmit({
+        //         success: function (data) {
+        //             if (data.code == 200) {
+        //                 alert("成功");
+        //             }
+        //         }
+        //     })
+        //     return false;
+        // });
+        
+        
+        
+        // $("form").submit(function(){
+        //     $("form").ajaxSubmit({
+        //         success: function(data){
+        //             if(data.code == 200){       
+        //                 //将登陆成功之后，返回的用户名以及用户头像存储到cookie当中
+        //                 $.cookie("userInfo", JSON.stringify(data.result),{path:"/"});
+        //                 alert("成功");
+        //                 //跳转页面
+        //                 location.href = "/";
+
+        //             }else{
+        //                 alert(data.msg);
+        //             }
+        //         }
+        //     });
+        //     return false;
+        // });
+         
+
+
+        
+    </script>
 </body>
 </html>
