@@ -47,13 +47,6 @@ define(["jquery","template","bootstrap"], function($,template) {
 			}
  		})
 	})
-	//改变按钮的颜色
-	if( $(".btn-toogle").attr("data-status") == 1){
-		$(".btn-toogle").css("color","black");
-	} else {
-		$(".btn-toogle").css("color","white");
-	}
 	
-
 
 })

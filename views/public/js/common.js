@@ -8,12 +8,19 @@ define(["jquery","template","NProgress","cookie"], function ($,template,NProgres
 
     //发送ajax请求时也要显示进度条
     $(document).ajaxStart(function() {
-
-
         NProgress.start();     
     });
+    //若是状态为401,说明用户信息已过期 返回重新登录
+    $(document).ajaxComplete(function (xhr){
+        if (xhr.status == 401) {
+          location.href = "/login";
+        } 
+    })
+
+
+
     $(document).ajaxStop(function() {
-     NProgress.start();
+         NProgress.done();
     });
     
     
