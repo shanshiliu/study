@@ -9,7 +9,9 @@ requirejs.config({
 		datepicker: "bootstrap-datepicker/js/bootstrap-datepicker",
 		NProgress: "nprogress/nprogress",
 		validate: "jquery-validate/jquery-validate.min",
-		ckeditor:　"ckeditor/ckeditor"
+		ckeditor:　"ckeditor/ckeditor",
+		uploadify: "uploadify/jquery.uploadify.min",
+		region: "jquery-region/jquery.region"
 	},
 	shim: {
 		"bootstrap": {
@@ -20,6 +22,9 @@ requirejs.config({
 	    },
 	    "ckeditor": {
 	    	exports: "CKEDITOR"
+	    },
+	    "uploadify": {
+	    	deps: ["jquery"]
 	    }
     }	
 })
