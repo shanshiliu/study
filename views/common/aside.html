@@ -11,53 +11,49 @@
     <div class="navs" id="navs">
         <ul class="list-unstyled">
             <li>
-                <a href="/index.php/dashboard/index" class="active">
-                    <i class="fa fa-home"></i>
+                <a href="/" class="active">
+                    <i class="fa fa-dashboard"></i>
                     仪表盘
                 </a>
             </li>
-            <li>
-                <a href="/index.php/user/list">
+            <!-- <li>
+                <a href="/user/list">
                     <i class="fa fa-bell"></i>
                     用户管理
                 </a>
-            </li>
+            </li> -->
             <li>
-                <a href="/index.php/teacher/list">
-                    <i class="fa fa-bell"></i>
+                <a href="/teacher/list">
+                    <i class="fa fa-mortar-board"></i>
                     讲师管理
                 </a>
             </li>
             <li>
+                <a href="/category/list">
+                    <i class="fa fa-indent"></i>
+                    分类管理
+                </a>
+            </li>
+            <li>
                 <a href="javascript:;">
-                    <i class="fa fa-cog"></i>
+                    <i class="fa fa-th"></i>
                     课程管理
                     <i class="arrow fa fa-angle-right"></i>
                 </a>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="/index.php/course/add">
+                        <a href="/course/add">
                              课程添加
                         </a>
                     </li>
                     <li>
-                        <a href="/index.php/course/course_list">
+                        <a href="/course/list">
                             课程列表
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/index.php/category/add">
-                            课程分类
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/index.php/course/course_topic">
-                            课程专题
                         </a>
                     </li>
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="/index.php/advert/advert_list">
                     <i class="fa fa-bell"></i>
                     广告管理
@@ -81,11 +77,10 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>
-
 <script type="text/template" id="userInfoTpl">
     <div class="avatar img-circle">
         <img src="{{tc_avatar}}">

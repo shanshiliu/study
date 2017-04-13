@@ -22,6 +22,10 @@ define(["jquery","template","NProgress","cookie"], function ($,template,NProgres
     $(document).ajaxStop(function() {
          NProgress.done();
     });
+
+
+    //点击侧边栏,高亮效果
+    
     
     
     

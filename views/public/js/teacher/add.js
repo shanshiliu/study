@@ -1,7 +1,8 @@
-define(["jquery","template","bootstrap","datepicker","form","validate"], function($,template) {
+define(["jquery","template","util","bootstrap","datepicker","form","validate"], function($,template,util) {
 
         //将地址栏中事先存好的id取出来
-	 	var id = location.search.slice(1).split("=")[1];
+        //封装
+	 	var id = util.getQuery().id;
 	 	//向后台获取数据 利用模板引擎将数据渲染到页面去
 	 
 	 	// console.log(id);

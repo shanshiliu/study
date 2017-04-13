@@ -11,7 +11,10 @@ requirejs.config({
 		validate: "jquery-validate/jquery-validate.min",
 		ckeditor:　"ckeditor/ckeditor",
 		uploadify: "uploadify/jquery.uploadify.min",
-		region: "jquery-region/jquery.region"
+		region: "jquery-region/jquery.region",
+		util: "../js/lib/util",
+		jcrop:"jcrop/js/Jcrop",
+		echarts: "echarts/echarts.min"
 	},
 	shim: {
 		"bootstrap": {
@@ -24,6 +27,9 @@ requirejs.config({
 	    	exports: "CKEDITOR"
 	    },
 	    "uploadify": {
+	    	deps: ["jquery"]
+	    },
+	    "jcrop": {
 	    	deps: ["jquery"]
 	    }
     }	
